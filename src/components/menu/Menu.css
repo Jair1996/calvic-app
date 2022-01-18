@@ -1,0 +1,7 @@
+.colorActive {
+  color: var(--primary-color);
+}
+
+.Menu-link {
+  margin-right: 41px;
+}
