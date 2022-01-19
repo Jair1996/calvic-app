@@ -28,7 +28,7 @@ body {
 
 main {
   min-height: calc(200vh - (var(--footer-height) + var(--header-height)));
-  padding-top: calc(var(--header-height) + 1rem);
+  padding-top: calc(var(--header-height) + 0.60rem);
 }
 
 .container {
@@ -58,6 +58,10 @@ a{
   flex-direction: inherit;
   flex-wrap: inherit;
   gap: inherit;
+}
+
+.text-bold {
+  font-weight: 700;
 }
 
 @media screen and (min-width: 750px) {

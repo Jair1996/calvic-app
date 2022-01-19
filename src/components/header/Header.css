@@ -9,6 +9,7 @@
   padding-right: 1rem;
   background-color: white;
   box-shadow: 0px 3px 9px rgba(141, 139, 139, 0.14);
+  z-index: 100;
 }
 
 .Header-logo {
