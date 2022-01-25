@@ -33,7 +33,7 @@ const MenuMobile = () => {
           className={({ isActive }) =>
             isActive ? "MenuMobile-link colorActive" : "MenuMobile-link"
           }
-          to={"catalogo"}
+          to={"catalogo/hombre/sandalias"}
           onClick={handleTogleMenu}
         >
           Catálogo

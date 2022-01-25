@@ -11,7 +11,6 @@ const index = ({
   buttonType,
   imgHeight,
 }) => {
-  console.log(bgColor);
   const styleCard = {
     background: `linear-gradient(144.48deg, rgba(${bgColor}, 1) 48.39%, rgba(${bgColor}, 0.75) 100%)`,
   };

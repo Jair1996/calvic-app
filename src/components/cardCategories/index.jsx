@@ -43,36 +43,6 @@ const index = () => {
         img={ShoeMan}
         imgHeight={253}
       />
-      {/* <div className="CardCategories-container CardCategories-container-2">
-        <CardCategory
-          text={{
-            content: "Zapatillas",
-            color: "#000",
-          }}
-          textBg={{ content: "Lo último", color: "#FFF" }}
-          bgColor="236, 236, 236"
-          img={ShoeBest}
-          imgHeight={267}
-        />
-        <CardCategory
-          text={{
-            content: "Zapatos",
-            color: "#FFF",
-          }}
-          textBg={{ content: "Elegantes", color: "#FFEA9F" }}
-          bgColor="254, 210, 55"
-          img={ShoeVestir}
-        />
-        <CardCategory
-          text={{
-            content: "Sandalias",
-            color: "#FFF",
-          }}
-          textBg={{ content: "Amazing", color: "#66A8F2" }}
-          bgColor="22, 132, 255"
-          img={SanldalMan}
-        />
-      </div> */}
     </section>
   );
 };

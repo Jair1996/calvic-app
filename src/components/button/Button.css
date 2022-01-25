@@ -25,3 +25,13 @@
   background-color: var(--primary-color-alt);
   color: white;
 }
+
+.Button.ghost.yellow {
+  color: #FFC807;
+}
+
+.Button.ghost.yellow:hover {
+  background-color: #FFC807;
+  color: #fff;
+  outline: 1px solid #fff;
+}

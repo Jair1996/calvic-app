@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import db from "../helpers/firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
-export const useGetProducts = (filter = "featureProduct") => {
+export const useGetProducts = (filter = { type: "featureProduct" }) => {
   const isMounted = useRef(true);
 
   const [state, setState] = useState({
@@ -28,13 +28,13 @@ export const useGetProducts = (filter = "featureProduct") => {
 
     let q;
 
-    if (filter === "featureProduct") {
+    if (filter.type === "featureProduct") {
       q = query(citiesRef, where("featureProduct", "==", true));
     } else {
       q = query(
         citiesRef,
-        where("category", "==", "mujer"),
-        where("subcategory", "==", "sandalias")
+        where("category", "==", filter.payload.category),
+        where("subcategory", "==", filter.payload.subcategory)
       );
     }
 
@@ -70,7 +70,7 @@ export const useGetProducts = (filter = "featureProduct") => {
     };
 
     getProducts(q);
-  }, [filter]);
+  }, [filter.type, filter.payload.category, filter.payload.subcategory]);
 
   return state;
 };

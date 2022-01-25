@@ -1,9 +1,11 @@
 import "./Button.css";
 
-const index = ({ buttonType, text }) => {
+const index = ({ buttonType, text, color }) => {
   return (
     <button
-      className={`Button primary ${!!buttonType ? buttonType : ""}`}
+      className={`Button primary ${!!buttonType ? buttonType : ""} ${
+        !!color ? color : ""
+      }`}
     >
       {text}
     </button>

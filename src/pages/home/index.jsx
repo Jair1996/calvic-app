@@ -30,6 +30,7 @@ const index = () => {
         textBg="Elengancia en ti"
         bgColor="#FFC807"
         textBgColor="#FED852"
+        btnColor="yellow"
       />
       <Brands />
     </>

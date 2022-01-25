@@ -9,6 +9,7 @@ import AboutUs from "./pages/aboutUs";
 import NotFound from "./pages/notFound";
 
 import "./App.css";
+import ProductGrid from "./components/productGrid";
 
 function App() {
   return (
@@ -19,9 +20,15 @@ function App() {
         <div className="content-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/catalogo" element={<Catalog />} />
-            <Route path="/producto" element={<Product />} />
-            <Route path="/nosotros" element={<AboutUs />} />
+            {/* <Route path="catalogo" element={<Catalog />} /> */}
+            <Route path="catalogo" element={<Catalog />}>
+              <Route index element={<p>Seleccione una sub categoría</p>} />
+              <Route path=":category">
+                <Route path=":subcategory" element={<ProductGrid />} />
+              </Route>
+            </Route>
+            <Route path="producto" element={<Product />} />
+            <Route path="nosotros" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

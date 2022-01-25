@@ -17,7 +17,7 @@ const Menu = () => {
         className={({ isActive }) =>
           isActive ? "Menu-link colorActive" : "Menu-link"
         }
-        to={"catalogo"}
+        to={"catalogo/hombre/sandalias"}
       >
         Catálogo
       </NavLink>

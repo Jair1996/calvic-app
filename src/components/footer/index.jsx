@@ -20,7 +20,7 @@ const Footer = () => {
             <Link className="link" to={"/"}>
               Inicio
             </Link>
-            <Link className="link" to={"catalogo"}>
+            <Link className="link" to={"catalogo/hombre/sandalias"}>
               Catálogo
             </Link>
             <Link className="link" to={"nosotros"}>

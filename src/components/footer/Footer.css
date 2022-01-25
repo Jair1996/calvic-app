@@ -1,6 +1,4 @@
 .Footer {
-  /* background-color: blue; */
-  border-top: 1px solid black;
   display: grid;
   gap: 25px;
   padding-top: 20px;

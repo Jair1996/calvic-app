@@ -1,9 +1,18 @@
+import { useParams } from "react-router-dom";
 import { useGetProducts } from "../../hooks/useGetProducts";
 import ProductGridItem from "../productGridItem";
 import "./ProductGrid.css";
 
 const ProductGrid = () => {
-  const { data: products, loading } = useGetProducts("featureProduct");
+  let params = useParams();
+
+  const { data: products, loading } = useGetProducts({
+    type: !!params.category ? "product" : "featureProduct",
+    payload: {
+      category: !!params.category ? params.category : "",
+      subcategory: !!params.subcategory ? params.subcategory : "",
+    },
+  });
 
   return (
     <>
