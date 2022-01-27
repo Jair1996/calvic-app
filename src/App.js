@@ -27,7 +27,9 @@ function App() {
                 <Route path=":subcategory" element={<ProductGrid />} />
               </Route>
             </Route>
-            <Route path="producto" element={<Product />} />
+            <Route path="producto">
+              <Route path=":idProducto" element={<Product />} />
+            </Route>
             <Route path="nosotros" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

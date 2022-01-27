@@ -24,12 +24,16 @@ export const useGetProducts = (filter = { type: "featureProduct" }) => {
       error: null,
     });
 
+    console.log("FETCH");
+
     const citiesRef = collection(db, "products");
 
     let q;
 
     if (filter.type === "featureProduct") {
       q = query(citiesRef, where("featureProduct", "==", true));
+    } else if (filter.type === "producto") {
+      q = query(citiesRef, where("sku", "==", filter.payload.id));
     } else {
       q = query(
         citiesRef,
@@ -70,7 +74,12 @@ export const useGetProducts = (filter = { type: "featureProduct" }) => {
     };
 
     getProducts(q);
-  }, [filter.type, filter.payload.category, filter.payload.subcategory]);
+  }, [
+    filter.type,
+    filter.payload.category,
+    filter.payload.subcategory,
+    filter.payload.id,
+  ]);
 
   return state;
 };

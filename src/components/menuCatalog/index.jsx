@@ -1,8 +1,9 @@
+import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 import "./MenuCatalog.css";
 import menu from "../../assets/menu-catalog.svg";
-import { useRef } from "react";
+import arrowBot from "../../assets/arrow_bot.png";
 
 const MenuCatalog = () => {
   const navRef = useRef();
@@ -28,6 +29,7 @@ const MenuCatalog = () => {
         <details open>
           <summary className="MenuCatalog-titleList" style={style}>
             Hombre
+            <img src={arrowBot} alt="flecha" />
           </summary>
           <ol className="MenuCatalog-list">
             <li onClick={handleTogleMenu} className="MenuCatalog-item">
@@ -66,6 +68,7 @@ const MenuCatalog = () => {
         <details open>
           <summary className="MenuCatalog-titleList" style={style}>
             Mujer
+            <img src={arrowBot} alt="flecha" />
           </summary>
           <ol className="MenuCatalog-list">
             <li onClick={handleTogleMenu} className="MenuCatalog-item">
@@ -104,6 +107,7 @@ const MenuCatalog = () => {
         <details open>
           <summary className="MenuCatalog-titleList" style={style}>
             Niños
+            <img src={arrowBot} alt="flecha" />
           </summary>
           <ol className="MenuCatalog-list">
             <li onClick={handleTogleMenu} className="MenuCatalog-item">

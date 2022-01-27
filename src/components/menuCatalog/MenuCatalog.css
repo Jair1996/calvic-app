@@ -36,6 +36,10 @@
 
 .MenuCatalog-titleList {
   color: var(--text-color-alt);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .MenuCatalog-item {
@@ -53,6 +57,7 @@
     position: static;
     width: auto;
     border: none;
+    padding: 0;
   }
 
   .MenuCatalog-img {

@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./ProductGridItem.css";
 
 const ProductGridItem = ({ data }) => {
+  let navigate = useNavigate();
+
   const { product } = data;
 
   let priceDiscount = 0;
@@ -11,8 +14,12 @@ const ProductGridItem = ({ data }) => {
     priceDiscount = Number.parseFloat(product.price - desc).toFixed(2);
   }
 
+  const handleClick = () => {
+    navigate(`/producto/${product.sku}`);
+  };
+
   return (
-    <div className="ProductGridItem">
+    <div onClick={handleClick} className="ProductGridItem">
       {product.discount !== 0 && (
         <div className="ProductGridItem-discount">-{product.discount}%</div>
       )}
