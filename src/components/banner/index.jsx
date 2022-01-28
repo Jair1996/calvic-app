@@ -10,6 +10,7 @@ const index = ({
   bgColor,
   textBgColor,
   btnColor,
+  goTo,
 }) => {
   return (
     <section className="Banner" style={{ backgroundColor: bgColor }}>
@@ -23,7 +24,12 @@ const index = ({
         <p className="Banner-title">{textTitle}</p>
         <p className="Banner-description">{textDescription}</p>
         <div>
-          <Button buttonType="ghost" text="Ver Catálogo" color={btnColor} />
+          <Button
+            goTo={goTo}
+            buttonType="ghost"
+            text="Ver Catálogo"
+            color={btnColor}
+          />
         </div>
       </div>
     </section>

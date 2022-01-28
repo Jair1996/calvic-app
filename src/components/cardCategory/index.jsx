@@ -10,6 +10,7 @@ const index = ({
   img,
   buttonType,
   imgHeight,
+  goTo,
 }) => {
   const styleCard = {
     background: `linear-gradient(144.48deg, rgba(${bgColor}, 1) 48.39%, rgba(${bgColor}, 0.75) 100%)`,
@@ -35,7 +36,9 @@ const index = ({
           src={img}
           alt="shoe"
         />
-        {!!button && <Button buttonType={buttonType} text="Ver Más" />}
+        {!!button && (
+          <Button buttonType={buttonType} text="Ver Más" goTo={goTo} />
+        )}
       </div>
     </div>
   );

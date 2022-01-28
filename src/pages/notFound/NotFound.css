@@ -1,0 +1,30 @@
+.NotFound {
+  min-height: calc(100vh - clamp(3.75rem, 3.21rem + 2.71vw, 5.38rem));
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: clamp(3.75rem, 3.21rem + 2.71vw, 5.38rem);
+}
+
+.NotFound-image {
+  width: 200px;
+  margin-bottom: clamp(2.81rem, 2.75rem + 0.63vw, 3.25rem);
+}
+
+.NotFound-title {
+  margin-top: 0;
+  font-size: clamp(1.38rem, 1.32rem + 0.54vw, 1.75rem);
+  color: var(--text-color-alt);
+  font-weight: 700;
+  margin-bottom: clamp(1.06rem, 1.02rem + 0.36vw, 1.31rem);
+}
+
+.NotFound-content {
+  margin-top: 0;
+  margin-bottom: clamp(2.81rem, 2.75rem + 0.63vw, 3.25rem);
+  font-size: clamp(0.88rem, 0.86rem + 0.18vw, 1.00rem);
+  text-align: center;
+}

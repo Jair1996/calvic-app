@@ -21,6 +21,7 @@ const index = () => {
         textBg="Lo mejor en saldalias"
         bgColor="#FB2735"
         textBgColor="#FC5560"
+        goTo="catalogo/hombre/sandalias"
       />
       <FeaturedProducts />
       <Banner
@@ -31,6 +32,7 @@ const index = () => {
         bgColor="#FFC807"
         textBgColor="#FED852"
         btnColor="yellow"
+        goTo="catalogo/hombre/zapatos"
       />
       <Brands />
     </>

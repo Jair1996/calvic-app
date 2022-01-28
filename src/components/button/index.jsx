@@ -1,8 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 import "./Button.css";
 
-const index = ({ buttonType, text, color }) => {
+const Button = ({ buttonType, text, color, goTo }) => {
+  let navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(goTo);
+  };
+
   return (
     <button
+      onClick={handleClick}
       className={`Button primary ${!!buttonType ? buttonType : ""} ${
         !!color ? color : ""
       }`}
@@ -12,4 +21,4 @@ const index = ({ buttonType, text, color }) => {
   );
 };
 
-export default index;
+export default Button;

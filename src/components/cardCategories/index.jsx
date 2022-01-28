@@ -18,6 +18,7 @@ const index = () => {
         button={true}
         img={ShoeWoman}
         imgHeight={210}
+        goTo={"catalogo/mujer/sandalias"}
       />
       <CardCategory
         text={{
@@ -30,6 +31,7 @@ const index = () => {
         buttonType="ghost"
         img={ShoeKid}
         imgHeight={188}
+        goTo={"catalogo/children/sandalias"}
       />
       <CardCategory
         text={{
@@ -42,6 +44,7 @@ const index = () => {
         buttonType="ghost"
         img={ShoeMan}
         imgHeight={253}
+        goTo={"catalogo/hombre/sandalias"}
       />
     </section>
   );

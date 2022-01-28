@@ -11,7 +11,7 @@ const index = () => {
         <p className="Hero-design">Diseño</p>
         <p className="Hero-desc text-bold">Estilo</p>
         <h1 className="text-bold">BEST SHOES</h1>
-        <Button text="Ver Catálogo" />
+        <Button text="Ver Catálogo" goTo={"catalogo/hombre/sandalias"} />
       </div>
     </section>
   );
