@@ -1,0 +1,23 @@
+.banner-diagonal {
+  background-image: url(../../assets/aboutUs-banner.jpg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+  height: 14rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: clamp(3.50rem, 2.00rem + 7.50vw, 8.00rem);
+}
+
+.banner-diagonal-detail {
+  background-color: var(--primary-color);
+  opacity: .9;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-diagonal-detail h1 {
+  color: #fff;
+  font-size: clamp(1.25rem, 1.08rem + 0.83vw, 1.75rem);
+}

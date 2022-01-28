@@ -1,9 +1,13 @@
+import BannerAboutUs from "../../components/bannerAboutUs";
+import ContentAboutUs from "../../components/contentAboutUs";
+
 const index = () => {
   return (
-    <div>
-      About us
+    <div className="Aboutus">
+      <BannerAboutUs />
+      <ContentAboutUs />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
