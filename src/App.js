@@ -20,14 +20,29 @@ function App() {
         <div className="content-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="catalogo" element={<Catalog />} /> */}
             <Route path="catalogo" element={<Catalog />}>
-              <Route index element={<p>Seleccione una sub categoría</p>} />
+              <Route
+                index
+                element={
+                  <p className="Product-notFound">
+                    Seleccione una categoría a buscar
+                  </p>
+                }
+              />
               <Route path=":category">
+                <Route
+                  index
+                  element={
+                    <p className="Product-notFound">
+                      Seleccione una categoría a buscar
+                    </p>
+                  }
+                />
                 <Route path=":subcategory" element={<ProductGrid />} />
               </Route>
             </Route>
             <Route path="producto">
+              <Route index element={<NotFound />} />
               <Route path=":idProducto" element={<Product />} />
             </Route>
             <Route path="nosotros" element={<AboutUs />} />

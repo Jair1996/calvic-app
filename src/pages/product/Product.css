@@ -11,6 +11,11 @@
   "description";
 }
 
+.Product-notFound {
+  text-align: center;
+  font-size: clamp(0.88rem, 0.86rem + 0.18vw, 1.00rem);
+}
+
 .Product-images {
   grid-area: images;
 }

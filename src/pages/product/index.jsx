@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../../components/loader";
 import ProductDescription from "../../components/productDescription";
 import ProductImages from "../../components/productImages";
 import ProductInfo from "../../components/productInfo";
@@ -19,7 +20,9 @@ const Product = () => {
 
   useEffect(() => {
     if (!loading) {
-      setUrlImage(product[0].product.images.main);
+      if (product.length > 0) {
+        setUrlImage(product[0].product.images.main);
+      }
     }
   }, [product, loading]);
 
@@ -27,10 +30,16 @@ const Product = () => {
     setUrlImage(url);
   };
 
+  console.log(product);
+
   return (
     <>
       {loading ? (
-        <p>Cargando...</p>
+        <Loader />
+      ) : product.length === 0 ? (
+        <p className="Product-notFound">
+          Lo sentimos, no existe producto con el código {idProducto}
+        </p>
       ) : (
         <div className="Product">
           <section className="Product-images">

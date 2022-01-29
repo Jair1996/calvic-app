@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetProducts } from "../../hooks/useGetProducts";
+import Loader from "../loader";
 import ProductGridItem from "../productGridItem";
 import "./ProductGrid.css";
 
@@ -14,10 +15,17 @@ const ProductGrid = () => {
     },
   });
 
+  console.log(products);
+
   return (
     <>
       {!!loading ? (
-        <p>Cargando...</p>
+        <Loader />
+      ) : products.length === 0 ? (
+        <p className="Product-notFound">
+          Lo sentimos, no existen productos para "{params.category}/
+          {params.subcategory}"
+        </p>
       ) : (
         <div className="ProductGrid">
           {products.map((product) => (

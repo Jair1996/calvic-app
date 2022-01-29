@@ -1,8 +1,6 @@
 import "./ProductInfo.css";
 
 const ProductInfo = ({ product }) => {
-  console.log(product);
-
   let priceDiscount = 0;
 
   if (product.discount !== 0) {
